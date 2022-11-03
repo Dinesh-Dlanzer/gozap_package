@@ -41,7 +41,8 @@ class _SwapReportWidgetState extends State<SwapReportWidget> {
               ]),
         columnsFit: true,
         verticalScrollController:ScrollController(),
-        visibleRowsCount: 0);
+        visibleRowsCount: 0)
+      );
     );
   }
 }
