@@ -33,7 +33,7 @@ class _AssetReportWidgetState extends State<AssetReportWidget> {
                   stringValue: (row) => row.AssetormattedCreatedAt),
             ]),
         columnsFit: true,
-            verticalScrollController:ScrollController(),
+        verticalScrollController:ScrollController(),
         visibleRowsCount: 0);
   }
 }
