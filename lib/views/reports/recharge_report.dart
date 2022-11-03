@@ -38,7 +38,7 @@ class _RechargeReportWidgetState extends State<RechargeReportWidget> {
             ]),
         columnsFit: true,
         verticalScrollController:ScrollController(),
-        visibleRowsCount: 0)
+        visibleRowsCount: 0
     );
   }
 }
