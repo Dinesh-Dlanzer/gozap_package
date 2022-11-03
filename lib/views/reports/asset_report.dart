@@ -16,7 +16,6 @@ class _AssetReportWidgetState extends State<AssetReportWidget> {
   Widget build(BuildContext context) {
     return EasyTable<AssetModule>(
         EasyTableModel<AssetModule>(
-            verticalScrollController:ScrollController(),
             rows: widget.assetModuleList,
             columns: [
               EasyTableColumn(
@@ -34,6 +33,7 @@ class _AssetReportWidgetState extends State<AssetReportWidget> {
                   stringValue: (row) => row.AssetormattedCreatedAt),
             ]),
         columnsFit: true,
+            verticalScrollController:ScrollController(),
         visibleRowsCount: 0);
   }
 }
