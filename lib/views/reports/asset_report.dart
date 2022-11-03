@@ -16,6 +16,7 @@ class _AssetReportWidgetState extends State<AssetReportWidget> {
   Widget build(BuildContext context) {
     return EasyTable<AssetModule>(
         EasyTableModel<AssetModule>(
+            verticalScrollController:ScrollController(),
             rows: widget.assetModuleList,
             columns: [
               EasyTableColumn(
