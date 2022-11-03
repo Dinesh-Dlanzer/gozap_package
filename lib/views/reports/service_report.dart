@@ -34,6 +34,7 @@ class _ServiceReportWidgetState extends State<ServiceReportWidget> {
             ]),
         columnsFit: true,
         verticalScrollController:ScrollController(),
-        visibleRowsCount: 0);
+        visibleRowsCount: 0)
+    );
   }
 }
