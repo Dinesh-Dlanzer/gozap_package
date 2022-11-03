@@ -18,6 +18,7 @@ class _SwapReportWidgetState extends State<SwapReportWidget> {
       width: 500,
       height: 200,
       child: EasyTable<SwapHistoryModule>(
+          verticalScrollController:ScrollController(),
           EasyTableModel<SwapHistoryModule>(
               rows: widget.SwapHistoryList,
               columns: [
