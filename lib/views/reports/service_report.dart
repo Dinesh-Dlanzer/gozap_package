@@ -34,6 +34,7 @@ class _ServiceReportWidgetState extends State<ServiceReportWidget> {
                   stringValue: (row) => row.ServiceHistoryFormattedCreatedAt),
             ]),
         columnsFit: true,
+        verticalScrollController:ScrollController(),
         visibleRowsCount: 0);
   }
 }
