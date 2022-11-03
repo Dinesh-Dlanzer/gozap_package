@@ -34,7 +34,7 @@ class _AssetReportWidgetState extends State<AssetReportWidget> {
             ]),
         columnsFit: true,
         verticalScrollController:ScrollController(),
-        visibleRowsCount: 0)
+        visibleRowsCount: 0
     );
   }
 }
