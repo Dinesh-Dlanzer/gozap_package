@@ -40,8 +40,9 @@ class _SwapReportWidgetState extends State<SwapReportWidget> {
                     name: 'Date & Time',
                     stringValue: (row) => row.SwapFormattedCreatedAt),
               ]),
-          columnsFit: true,
-          visibleRowsCount: 0),
+        columnsFit: true,
+        verticalScrollController:ScrollController(),
+        visibleRowsCount: 0);
     );
   }
 }
