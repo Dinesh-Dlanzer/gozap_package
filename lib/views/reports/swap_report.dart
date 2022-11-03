@@ -14,10 +14,7 @@ class SwapReportWidget extends StatefulWidget {
 class _SwapReportWidgetState extends State<SwapReportWidget> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 500,
-      height: 200,
-      child: EasyTable<SwapHistoryModule>(
+    return EasyTable<SwapHistoryModule>(
           EasyTableModel<SwapHistoryModule>(
               rows: widget.SwapHistoryList,
               columns: [
@@ -42,7 +39,6 @@ class _SwapReportWidgetState extends State<SwapReportWidget> {
         columnsFit: true,
         verticalScrollController:ScrollController(),
         visibleRowsCount: 0
-      )
     );
   }
 }
