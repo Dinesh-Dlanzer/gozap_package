@@ -46,7 +46,7 @@ class SignupModel extends ChangeNotifier {
     notifyListeners();
     try {
       var resdata = await APIService(context).postData(
-          "http://localhost/cygnusa/batterySwap/api/User/signup.php",
+          "User/signup.php",
           {
             "name": data!["name"],
             "phonenumber": data["phonenumber"],
