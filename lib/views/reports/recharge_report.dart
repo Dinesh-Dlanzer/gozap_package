@@ -16,6 +16,7 @@ class _RechargeReportWidgetState extends State<RechargeReportWidget> {
   Widget build(BuildContext context) {
     return EasyTable<RechargeHistoryModule>(
         EasyTableModel<RechargeHistoryModule>(
+            verticalScrollController:ScrollController(),
             rows: widget.rechargeHistoryModuleList,
             columns: [
               EasyTableColumn(
