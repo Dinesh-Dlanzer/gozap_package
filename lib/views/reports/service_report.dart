@@ -16,6 +16,7 @@ class _ServiceReportWidgetState extends State<ServiceReportWidget> {
   Widget build(BuildContext context) {
     return EasyTable<ServiceHistoryModule>(
         EasyTableModel<ServiceHistoryModule>(
+            verticalScrollController:ScrollController(),
             rows: widget.serviceHistoryModuleList,
             columns: [
               EasyTableColumn(
