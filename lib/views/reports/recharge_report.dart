@@ -38,6 +38,7 @@ class _RechargeReportWidgetState extends State<RechargeReportWidget> {
                   stringValue: (row) => row.RechargeFormattedCreatedAt),
             ]),
         columnsFit: true,
+        verticalScrollController:ScrollController(),
         visibleRowsCount: 0);
   }
 }
