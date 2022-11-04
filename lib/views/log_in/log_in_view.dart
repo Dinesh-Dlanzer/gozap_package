@@ -19,11 +19,9 @@ import 'package:gozap_package/controllers/log_in/log_in_controller.dart';
 import 'package:gozap_package/components/localization/app_translations.dart';
 
 class LogInView extends StatefulWidget {
-  LogInView({
-    super.key,
-    required this.nextScreen,
-  });
+  LogInView({super.key, required this.nextScreen, this.needSignup = true});
   Widget nextScreen;
+  bool needSignup;
   @override
   State<LogInView> createState() => _LogInViewState();
 }
@@ -37,7 +35,7 @@ class _LogInViewState extends State<LogInView> {
   Widget build(BuildContext context) {
     LogInController viewController = LogInController();
     return ChangeNotifierProvider<LogInModel>(
-      create: (context) => LogInModel.instance(context,widget.nextScreen),
+      create: (context) => LogInModel.instance(context, widget.nextScreen),
       child: Consumer<LogInModel>(
         builder: (context, viewModel, child) {
           if (viewModel.status == LogInModelStatus.Loading) {
@@ -86,7 +84,7 @@ class _LogInViewState extends State<LogInView> {
                               size: 15.0,
                             ),
                             hintText: AppTranslations.of(context)!
-                                .text("key_login_field_RiderID_or_PhoneNumber"),
+                                .text("key_login_field_UserID_or_PhoneNumber"),
                           ),
                         ),
                         const SizedBox(
@@ -200,19 +198,24 @@ class _LogInViewState extends State<LogInView> {
                           ),
                         ),
                       ),
+
                       //Sign Up
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SignupView(
-                                      nextScreen: widget.nextScreen)));
-                        },
-                        child: Text(
-                          AppTranslations.of(context)!.text("key_btn_sign_up"),
-                          style: const TextStyle(
-                            decoration: TextDecoration.underline,
+                      Visibility(
+                        visible: widget.needSignup,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SignupView(
+                                        nextScreen: widget.nextScreen)));
+                          },
+                          child: Text(
+                            AppTranslations.of(context)!
+                                .text("key_btn_sign_up"),
+                            style: const TextStyle(
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
                         ),
                       ),
