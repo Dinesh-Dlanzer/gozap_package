@@ -25,6 +25,7 @@
   "key_login_field_UserID": "User ID",
   "key_login_field_RiderName": "Rider Name",
   "key_login_field_RiderID_or_PhoneNumber": "Rider ID / Phone Number",
+  "key_login_field_UserID_or_PhoneNumber": "User ID / Phone Number",
   "key_login_field_PhoneNumber": "Phone Number",
   "key_login_field_DEID": "DE ID",
   "key_login_field_Password": "Password",
