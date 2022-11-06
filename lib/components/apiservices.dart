@@ -31,11 +31,14 @@ class APIService {
       Future<bool> internetActive = GetConnect();
 
       if (await internetActive) {
-        var durl = url;
+        String mainURL= Provider.of<commonChangeNotifier>(context, listen: false).mainURL;
+        var durl = mainURL+url!;
         var header = <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         };
-        final response = await http.get(Uri.parse(durl), headers: header);
+        final response = await http.get(Uri.parse(durl), 
+//                                         headers: header
+                                       );
         if (response.statusCode == 200 || response.statusCode == 201) {
           dynamic res = json.decode(response.body);
           if (res["Message"] != null) {
@@ -68,7 +71,6 @@ class APIService {
       if (internetActive) {
         String mainURL= Provider.of<commonChangeNotifier>(context, listen: false).mainURL;
         var durl = mainURL+url!;
-        print(durl);
         var header = <String, String>{
           'content-type': 'application/json',
         };
