@@ -52,7 +52,7 @@ class SignupModel extends ChangeNotifier {
             "phonenumber": data["phonenumber"],
             "password": data["password"],
             "DEID": data["DEID"],
-            "UserReferID": data["UserReferID"],
+            "UserReferID": data["UserReferID"]??"",
             
           },
           false);
