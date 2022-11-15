@@ -26,7 +26,7 @@ class _AssetReportWidgetState extends State<AssetReportWidget> {
                 stringValue: (row) => row.AssetCategory.AssetCategoryTitle,
               ),
               EasyTableColumn(
-                name: 'in Service Center',
+                name: 'in Charging Center',
                 iconValue: (row) => row.IsInServiceCenter? CellIcon(icon: Icons.done):CellIcon(icon: Icons.close)),
               EasyTableColumn(
                   name: 'Date & Time',
