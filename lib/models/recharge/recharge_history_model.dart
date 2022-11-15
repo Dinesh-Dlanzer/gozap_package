@@ -43,7 +43,7 @@ class RechargeHistoryModule {
     return RechargeHistoryModule(
       RechargeID: json['RechargeID'],
       RiderID: json['RiderID'],
-      TransactionID: json['TransactionID'],
+      TransactionID: json['TransactionID']??"",
       PaymentTypeID: json['PaymentTypeID'],
       RechargeCreatedAt: DateTime.parse(json['RechargeCreatedAt']),
       RechargeUpdatedAt: DateTime.parse(json['RechargeUpdatedAt']),
